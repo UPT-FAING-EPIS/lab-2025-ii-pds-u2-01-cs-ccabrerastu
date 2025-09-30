@@ -4,10 +4,7 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '**.cs'
-      - 'docfx.json'
-      - 'docs/**'
+
 
 permissions:
   contents: write
