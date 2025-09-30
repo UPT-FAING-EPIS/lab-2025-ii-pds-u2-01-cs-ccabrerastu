@@ -26,10 +26,10 @@ jobs:
         run: dotnet tool install -g docfx
 
       - name: Generate metadata
-        run: docfx metadata
+        run: docfx metadata Bank/docfx_project/docfx.json
 
       - name: Build docs site
-        run: docfx build
+        run: docfx build Bank/docfx_project/docfx.json
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
