@@ -30,6 +30,8 @@ jobs:
       run: dotnet pack Bank/Bank.Domain/Bank.Domain.csproj --configuration Release --no-build --output ./nupkg
       
     - name: Publish to Personal GitHub Packages
+      # Only publish when it's a tag push, not a regular branch push
+      if: startsWith(github.ref, 'refs/tags/v')
       run: |
         for package in ./nupkg/*.nupkg
         do
