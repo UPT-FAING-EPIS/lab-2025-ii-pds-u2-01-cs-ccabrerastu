@@ -35,6 +35,6 @@ jobs:
         do
           dotnet nuget push "$package" \
             --source "https://nuget.pkg.github.com/ccabrerastu/index.json" \
-             --api-key ${{ secrets.ORG_PACKAGES_TOKEN }} \
+            --api-key ${{ secrets.ORG_PACKAGES_TOKEN }} \
             --skip-duplicate
         done
