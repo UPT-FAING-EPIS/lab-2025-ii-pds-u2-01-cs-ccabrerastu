@@ -1,0 +1,40 @@
+name: Build & Publish NuGet Package
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+    
+    - name: Restore
+      run: dotnet restore Bank/Bank.Domain/Bank.Domain.csproj
+      
+    - name: Build
+      run: dotnet build Bank/Bank.Domain/Bank.Domain.csproj --configuration Release --no-restore
+      
+    - name: Pack
+      run: dotnet pack Bank/Bank.Domain/Bank.Domain.csproj --configuration Release --no-build --output ./nupkg
+      
+    - name: Publish to Personal GitHub Packages
+      run: |
+        for package in ./nupkg/*.nupkg
+        do
+          dotnet nuget push "$package" \
+            --source "https://nuget.pkg.github.com/ccabrerastu/index.json" \
+             --api-key ${{ secrets.ORG_PACKAGES_TOKEN }} \
+            --skip-duplicate
+        done
