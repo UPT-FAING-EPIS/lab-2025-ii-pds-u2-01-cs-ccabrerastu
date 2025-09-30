@@ -9,9 +9,19 @@
     "title": "Add your introductions here! | Bank App",
     "keywords": "Add your introductions here!"
   },
+  "disenio.html": {
+    "href": "disenio.html",
+    "title": "| Bank App",
+    "keywords": "classDiagram class CreditCardFactoryMethod CreditCardFactoryMethod : +CreateProduct() ICreditCard class CreditCardFactory CreditCardFactory : +GetCreditCard() ICreditCard class ICreditCard ICreditCard : +GetCardType() String ICreditCard : +GetCreditLimit() Int ICreditCard : +GetAnnualCharge() Int class MoneyBack MoneyBack : +GetCardType() String MoneyBack : +GetCreditLimit() Int MoneyBack : +GetAnnualCharge() Int class MoneyBackFactoryMethod MoneyBackFactoryMethod : +CreateProduct() ICreditCard class Platinum Platinum : +GetCardType() String Platinum : +GetCreditLimit() Int Platinum : +GetAnnualCharge() Int class PlatinumFactoryMethod PlatinumFactoryMethod : +CreateProduct() ICreditCard class Titanium Titanium : +GetCardType() String Titanium : +GetCreditLimit() Int Titanium : +GetAnnualCharge() Int class TitaniumFactoryMethod TitaniumFactoryMethod : +CreateProduct() ICreditCard ICreditCard <|.. MoneyBack CreditCardFactoryMethod <|-- MoneyBackFactoryMethod ICreditCard <|.. Platinum CreditCardFactoryMethod <|-- PlatinumFactoryMethod ICreditCard <|.. Titanium CreditCardFactoryMethod <|-- TitaniumFactoryMethod"
+  },
   "index.html": {
     "href": "index.html",
     "title": "This is the HOMEPAGE. | Bank App",
     "keywords": "This is the HOMEPAGE. Diagrama de Clases Pruebas"
+  },
+  "SummaryGithub.html": {
+    "href": "SummaryGithub.html",
+    "title": "Summary | Bank App",
+    "keywords": "Summary Summary Generated on: 30/09/2025 - 12:34:09 Coverage date: 30/09/2025 - 12:13:22 - 30/09/2025 - 12:24:14 Parser: MultiReport (3x Cobertura) Assemblies: 1 Classes: 8 Files: 8 Line coverage: 79.6% (47 of 59) Covered lines: 47 Uncovered lines: 12 Coverable lines: 59 Total lines: 126 Branch coverage: 33.3% (2 of 6) Covered branches: 2 Total branches: 6 Method coverage: Feature is only available for sponsors Coverage Bank.Domain - 79.6% Name Line Branch Bank.Domain 79.6% 33.3% Bank.Domain.CreditCardFactory 50% 33.3% Bank.Domain.CreditCardFactoryMethod 100% Bank.Domain.MoneyBack 100% Bank.Domain.MoneyBackFactoryMethod 0% Bank.Domain.Platinum 100% Bank.Domain.PlatinumFactoryMethod 100% Bank.Domain.Titanium 100% Bank.Domain.TitaniumFactoryMethod 100%"
   }
 }

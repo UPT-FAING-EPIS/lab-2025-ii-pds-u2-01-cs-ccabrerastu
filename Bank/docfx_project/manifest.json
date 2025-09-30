@@ -13,6 +13,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "SummaryGithub.md",
+      "output": {
+        ".html": {
+          "relative_path": "SummaryGithub.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
@@ -53,6 +63,16 @@
         },
         ".json": {
           "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "disenio.md",
+      "output": {
+        ".html": {
+          "relative_path": "disenio.html"
         }
       },
       "version": ""
